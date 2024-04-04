@@ -1,0 +1,232 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPV6TQ7roRCeR7PlTtA7zIY",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kfm57/BTE-320-Kayla-Martins/blob/main/4/2/24%20Notes_Kayla_Martins\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def recursive_countdown(n):\n",
+        "  if n == 0:\n",
+        "    print(0)\n",
+        "  else:\n",
+        "    print(n)\n",
+        "    recursive_countdown(n-1)\n",
+        "\n",
+        "recursive_countdown(5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o649JIKL8oHd",
+        "outputId": "9dcbcb89-64d7-4fa1-e169-d55d2ae6f3e2"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def recursive_countdown(n):\n",
+        "  if n > 0:\n",
+        "    print(n)\n",
+        "    recursive_countdown(n-1)\n",
+        "\n",
+        "  else:\n",
+        "    print(0)\n",
+        "\n",
+        "recursive_countdown(5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UVQIB87X8tza",
+        "outputId": "3946c67e-da54-42a4-8501-c8875759f032"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def summation(n):\n",
+        "  s = 0\n",
+        "  while n >= 0:\n",
+        "    s = s + n\n",
+        "    n = n - 1\n",
+        "\n",
+        "  return s\n",
+        "\n",
+        "\n",
+        "summation(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Of8XdQf582KK",
+        "outputId": "da94e461-0607-4937-9171-949a7f7a3857"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def recursive_summation(n):\n",
+        "  if n == 0:\n",
+        "    return 0\n",
+        "  else:\n",
+        "    return n + recursive_summation(n-1)\n",
+        "\n",
+        "\n",
+        "recursive_summation(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3bTrEtxH85LZ",
+        "outputId": "91804679-51be-4e67-cc41-d0a64be0f5f9"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def factR(n):\n",
+        "  if n == 1:\n",
+        "    return 1\n",
+        "  else:\n",
+        "    return n * factR(n-1)\n",
+        "\n",
+        "factR(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sdOwELH487qG",
+        "outputId": "b8ceb33d-ce0d-4b81-8f93-be4c1282f825"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fibR(n):\n",
+        "  if n == 0 or n == 1:\n",
+        "    return 1\n",
+        "  else:\n",
+        "    return fibR(n-1) + fibR(n-2)\n",
+        "\n",
+        "\n",
+        "for i in range(8):\n",
+        "  print(fibR(i), end=\", \")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eQIl30Ls8-Jw",
+        "outputId": "9058b841-24a2-4f34-8162-ce971ab4101b"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1, 1, 2, 3, 5, 8, 13, 21, "
+          ]
+        }
+      ]
+    }
+  ]
+}
